@@ -72,7 +72,7 @@ INSERT INTO gerente (cod_empregado, cod_companhia)
 
 SELECT * FROM
 	empregado,
-    companhia,
+  companhia,
 	trabalha,
 	gerente
 ;
