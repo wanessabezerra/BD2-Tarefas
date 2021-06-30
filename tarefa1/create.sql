@@ -70,3 +70,9 @@ INSERT INTO gerente (cod_empregado, cod_companhia)
 		(1203,'123456789124')
 ;
 
+SELECT * FROM
+	empregado,
+    companhia,
+	trabalha,
+	gerente
+;
