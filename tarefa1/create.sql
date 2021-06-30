@@ -50,10 +50,10 @@ INSERT INTO empregado (cod_empregado, nome_empregado, rua, cidade, salario)
 
 INSERT INTO companhia (cod_companhia, cnpj, nome_companhia, cidade_companhia)
 	VALUES
-		(1201,'123456789123', 'Soft Sell', 'parelhas'),
-		(1202,'123456789124', 'Soft Sell', 'parelhas'),
-		(1001,'123456789125', 'Other', 'parelhas'),
-		(1002,'123456789126', 'Other', 'parelhas')
+		(1201,'123456789123', 'Soft Sell', 'Parelhas'),
+		(1202,'123456789124', 'Soft Sell', 'Parelhas'),
+		(1001,'123456789125', 'Xuxa', 'Caicó'),
+		(1002,'123456789126', 'Xuxa', 'Caicó')
 ;
 
 INSERT INTO trabalha (cod_empregado, cod_companhia)
