@@ -42,8 +42,8 @@ CREATE TABLE gerente (
 
 INSERT INTO empregado (cod_empregado, nome_empregado, rua, cidade, salario)
 	VALUES 
-		(2101, 'Wanessa', 'Valdemar Araujo Sampaio', 'parelhas', 13000),
-		(2102, 'Pedro', 'Sete de Setembro', 'parelhas', 3000),
+		(2101, 'Wanessa', 'Valdemar Araujo Sampaio', 'Parelhas', 13000),
+		(2102, 'Pedro', 'Sete de Setembro', 'Parelhas', 3000),
 		(2103, 'Luiz', 'Avani Azevedo', 'Caicó', 12000),
 		(2104, 'Henrique', 'Francisco Assis Filho', 'Caicó', 4000)
 ;
