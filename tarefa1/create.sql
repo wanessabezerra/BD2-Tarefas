@@ -13,7 +13,7 @@ CREATE TABLE empregado(
 
 CREATE TABLE companhia (
     cod_companhia NUMERIC(4) PRIMARY KEY NOT NULL,
-    cnpj CHAR(12) UNIQUE NOT NULL,  
+    cnpj NUMERIC(12) UNIQUE NOT NULL,  
     nome_companhia CHAR(100) NOT NULL,
     cidade_companhia CHAR(100) NOT NULL
 );
@@ -36,7 +36,7 @@ CREATE TABLE gerente (
        	REFERENCES empregado(cod_empregado)
         ON DELETE RESTRICT ON UPDATE CASCADE,
   	CONSTRAINT companhia_fk FOREIGN KEY (cod_companhia)
-       	REFERENCES companhia(c)
+       	REFERENCES companhia(cod_companhia)
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
@@ -48,26 +48,26 @@ INSERT INTO empregado (cod_empregado, nome_empregado, rua, cidade, salario)
 		(2104, 'Henrique', 'Francisco Assis Filho', 'parelhas', 2000)
 ;
 
-INSERT INTO companhia (cod_companhia, cnpj, nome_companhia, cidade)
+INSERT INTO companhia (cod_companhia, cnpj, nome_companhia, cidade_companhia)
 	VALUES
 		(1201,'123456789123', 'Soft Sell', 'parelhas'),
-		(1203,'123456789124', 'Soft Sell', 'parelhas'),
-		(1204,'123456789125', 'Other', 'parelhas'),
-		(1205,'123456789126', 'Other', 'parelhas')
+		(1202,'123456789124', 'Soft Sell', 'parelhas'),
+		(1001,'123456789125', 'Other', 'parelhas'),
+		(1002,'123456789126', 'Other', 'parelhas')
 ;
 
 INSERT INTO trabalha (cod_empregado, cod_companhia)
 	VALUES 
-    (1201,'123456789123'),
-		(1203,'123456789124'),
-		(1204,'123456789125'),
-		(1205,'123456789126')
+		(2101,'1201'),
+		(2102,'1202'),
+		(2103,'1001'),
+		(2104,'1002')
 ;
 
 INSERT INTO gerente (cod_empregado, cod_companhia)
 	VALUES 
-		(1201,'123456789123'),
-		(1203,'123456789124')
+		(2101,'1201'),
+		(2103,'1001')
 ;
 
 SELECT * FROM
