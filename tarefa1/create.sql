@@ -22,22 +22,22 @@ CREATE TABLE trabalha (
     cod_empregado NUMERIC(4) PRIMARY KEY NOT NULL,  
     cod_companhia NUMERIC(4) NOT NULL,
     CONSTRAINT fk_empregado FOREIGN KEY (cod_empregado)
-        REFERENCES empregado(cod_empregado)
-        ON DELETE RESTRICT ON UPDATE CASCADE,
- 	CONSTRAINT fk_cod_companhia FOREIGN KEY (cod_companhia)
-        REFERENCES companhia(cod_companhia)
-        ON DELETE RESTRICT ON UPDATE CASCADE
+    REFERENCES empregado(cod_empregado)
+    ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT fk_cod_companhia FOREIGN KEY (cod_companhia)
+    REFERENCES companhia(cod_companhia)
+    ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE TABLE gerente (
-    cod_empregado NUMERIC(4) PRIMARY KEY NOT NULL,  
-    cod_companhia NUMERIC(4) NOT NULL,
-  	CONSTRAINT empregado_fk FOREIGN KEY (cod_empregado)
-       	REFERENCES empregado(cod_empregado)
-        ON DELETE RESTRICT ON UPDATE CASCADE,
-  	CONSTRAINT companhia_fk FOREIGN KEY (cod_companhia)
-       	REFERENCES companhia(cod_companhia)
-        ON DELETE RESTRICT ON UPDATE CASCADE
+    	cod_empregado NUMERIC(4) PRIMARY KEY NOT NULL,  
+   	cod_companhia NUMERIC(4) NOT NULL,
+	CONSTRAINT empregado_fk FOREIGN KEY (cod_empregado)
+	REFERENCES empregado(cod_empregado)
+	ON DELETE RESTRICT ON UPDATE CASCADE,
+	CONSTRAINT companhia_fk FOREIGN KEY (cod_companhia)
+	REFERENCES companhia(cod_companhia)
+	ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 INSERT INTO empregado (cod_empregado, nome_empregado, rua, cidade, salario)
